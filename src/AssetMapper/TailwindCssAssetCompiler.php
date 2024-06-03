@@ -25,7 +25,6 @@ class TailwindCssAssetCompiler implements AssetCompilerInterface
 
     public function supports(MappedAsset $asset): bool
     {
-        dump($asset->sourcePath, realpath($asset->sourcePath), $this->tailwindBuilder->getInputCssPaths());
         return \in_array(
             realpath($asset->sourcePath),
             $this->tailwindBuilder->getInputCssPaths(),
